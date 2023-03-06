@@ -8,16 +8,16 @@
 
     <title>Document</title>
 </head>
-<body>
+<body style="background:grey;display: flex; justify-content: center;;align-items: center;">
     <div id="app">
-        <button @click="true_false">Show / Hide</button>
+        <button v-if="show" style="display:flex;align-items: center;padding:10px; ">Show</button>
+        <button v-if="hide" style="display:flex;align-items: center; padding:10px">Hide</button>
         <p v-if="show">{{template}} - {{author}} - {{age}}</p>
         <button v-on:click="age++" styel="">Increase Age</button>
         <button v-on:click="age--">Decrease Age</button>
         <button @:click="changeTitle('my bad')">DS</button>
     </div>
 
-    <h1>not this part</h1>
 
     <script src="app.js"></script>
 </body>

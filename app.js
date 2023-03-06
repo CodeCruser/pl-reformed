@@ -3,6 +3,7 @@ const app = Vue.createApp({
 
         return {
             show: true,
+            hide: true,
             template: ' I am the temp',
             author: 'a nobody',
             age: 35,
@@ -12,8 +13,13 @@ const app = Vue.createApp({
         changeTitle(tem) {
             this.template = tem
         },
-        true_false() {
-            this.show = !this.show
+        showBox() {
+            if (this.show = true){
+                return ()=> this.show
+            }
+            else {
+                return
+            }
         }
     }
 })
