@@ -2,18 +2,21 @@ const app = Vue.createApp({
     data() {
 
         return {
-            show: true,
+            showBooks: true,
             template: ' I am the temp',
             author: 'a nobody',
             age: 35,
         }
     },
     methods: {
-        changeTitle(tem) {
-            this.template = tem
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks
         },
-        showBox() {
-          this.show = !this.show
+        handleEvent(e, data) {
+            console.log(e, e.type)
+            if (data) {
+                console.log(data)
+            }
         }
     }
 })
